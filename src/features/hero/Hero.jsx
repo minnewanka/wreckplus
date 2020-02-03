@@ -4,7 +4,7 @@ import './style.css';
 
 const Hero = () => {
   return (
-    <div className="hero">
+    <div className="container hero">
       <div>
         <img src={logowp} alt="Logo" />
       </div>

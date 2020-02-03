@@ -1,0 +1,12 @@
+.albums {
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+}
+.album-image {
+  height: 300px;
+  width: 300px;
+}
+.album-section-title {
+  align-self: center;
+}

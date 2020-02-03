@@ -4,5 +4,6 @@
   align-items: center;
 }
 
-.section {
+.section-title {
+  letter-spacing: 5px;
 }

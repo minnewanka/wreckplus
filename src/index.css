@@ -11,6 +11,11 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  display: flex;
+}
 
 a.nostyle:link {
   text-decoration: inherit;
@@ -22,4 +27,18 @@ a.nostyle:visited {
   text-decoration: inherit;
   color: inherit;
   cursor: auto;
+}
+
+.slick-prev {
+  left: 3% !important;
+  z-index: 1;
+}
+.slick-next {
+  right: 3% !important;
+  z-index: 1;
+}
+
+.slick-slide img {
+  min-width: calc(100% - 100px);
+  margin: 0 50px;
 }
