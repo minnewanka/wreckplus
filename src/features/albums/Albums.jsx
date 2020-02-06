@@ -8,8 +8,8 @@ export default class SimpleSlider extends Component {
       dots: false,
       infinite: false,
       speed: 500,
-      slidesToShow: 3,
-      slidesToScroll: 3,
+      slidesToShow: 2,
+      slidesToScroll: 2,
     };
     return (
       <div className="albums">

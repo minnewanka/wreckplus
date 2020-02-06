@@ -1,5 +1,18 @@
 .hero {
+  background-image: url('http://wreckplus.com/wp-content/uploads/2016/02/Aboutmembers-1.jpg');
+  background-position: center;
+  height: 100%;
+  padding-top: 50px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  font-size: 1.5rem;
+}
+
+.hero-image {
+  margin: 2rem;
+}
+
+.hero-text {
+  color: white;
 }

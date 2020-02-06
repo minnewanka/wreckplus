@@ -2,8 +2,26 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
+  color: white;
+  z-index: 1;
+}
+
+.navbar.scrolled {
+  color: black;
+  background-color: white;
+  -webkit-transition: background-color 300ms linear;
+  -ms-transition: background-color 300ms linear;
+  transition: background-color 300ms linear;
 }
 
 .section-title {
   letter-spacing: 5px;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
 }
