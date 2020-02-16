@@ -1,0 +1,26 @@
+.album-modal {
+  display: flex;
+}
+.album-modal-content {
+  width: 100%;
+  padding-left: 2rem;
+}
+.album-modal-title-container {
+  display: flex;
+  justify-content: space-between;
+}
+.album-modal-close-button {
+  display: block;
+  width: 5rem;
+  height: 5rem;
+  background-color: black;
+  color: white;
+  border: none;
+  font-size: 3rem;
+}
+.album-modal-close-button:hover {
+  cursor: pointer;
+}
+.album-image {
+  display: inline-block;
+}

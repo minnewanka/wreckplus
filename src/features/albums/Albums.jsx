@@ -1,44 +1,66 @@
 import React, { Component } from 'react';
 import Slider from 'react-slick';
 import './style.css';
+import AlbumModal from './albumModal/AlbumModal';
+import albums from '../../ressources/albums.json';
 
 export default class SimpleSlider extends Component {
+  constructor() {
+    super();
+
+    this.state = {
+      modalIsOpen: false,
+      albumId: '',
+    };
+
+    this.openModal = this.openModal.bind(this);
+    this.afterOpenModal = this.afterOpenModal.bind(this);
+    this.closeModal = this.closeModal.bind(this);
+  }
+
+  openModal(albumId) {
+    this.setState({ modalIsOpen: true, albumId: albumId });
+    this.props.toggleNavbar();
+  }
+
+  afterOpenModal() {}
+
+  closeModal() {
+    this.setState({ modalIsOpen: false });
+    this.props.toggleNavbar();
+  }
+
   render() {
     const settings = {
       dots: false,
       infinite: false,
       speed: 500,
-      slidesToShow: 2,
-      slidesToScroll: 2,
+      slidesToShow: 3,
+      slidesToScroll: 3,
     };
+    const { modalIsOpen, albumId } = this.state;
+
     return (
       <div className="albums">
         <h1 className="album-section-title">ALBUM</h1>
+        <AlbumModal
+          isOpen={modalIsOpen}
+          onAfterOpen={this.afterOpenModal}
+          closeModal={this.closeModal}
+          openModal={this.openModal}
+          albumId={albumId}
+        />
         <Slider {...settings}>
-          {[
-            {
-              url:
-                'http://wreckplus.com/wp-content/uploads/2018/04/Roars-pochette-internet.jpg',
-            },
-            {
-              url:
-                'http://wreckplus.com/wp-content/uploads/2014/02/a1950255279_16.jpg',
-            },
-            {
-              url:
-                'http://wreckplus.com/wp-content/uploads/2014/03/riding-720.jpg',
-            },
-            {
-              url:
-                'http://wreckplus.com/wp-content/uploads/2016/04/pochette-starcrossed-768x768.jpg',
-            },
-            {
-              url:
-                'http://wreckplus.com/wp-content/uploads/2014/02/a0480852077_10.jpg',
-            },
-          ].map(image => (
-            <div>
-              <img src={image.url} alt="album" width="300" length="300" />
+          {albums.reverse().map(album => (
+            <div key={`album-${album.id}`}>
+              <img
+                className="grow"
+                src={album.imageUrl}
+                alt="album"
+                width="300"
+                length="300"
+                onClick={() => this.openModal(album.id)}
+              />
             </div>
           ))}
         </Slider>

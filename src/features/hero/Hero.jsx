@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import logowp from '../../images/logo-wp.png';
 import './style.css';
-import { render } from '@testing-library/react';
 
 class Hero extends Component {
   render() {

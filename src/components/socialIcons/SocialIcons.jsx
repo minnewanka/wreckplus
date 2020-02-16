@@ -14,6 +14,7 @@ const SocialIcons = () => {
         },
       ].map(social => (
         <a
+          key={social.name}
           className="nostyle social-icon"
           href={social.url}
           target="_blank"

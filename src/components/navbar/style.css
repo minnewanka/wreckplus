@@ -9,9 +9,6 @@
 .navbar.scrolled {
   color: black;
   background-color: white;
-  -webkit-transition: background-color 300ms linear;
-  -ms-transition: background-color 300ms linear;
-  transition: background-color 300ms linear;
 }
 
 .section-title {

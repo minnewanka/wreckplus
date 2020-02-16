@@ -11,3 +11,14 @@
 .album-section-title {
   align-self: center;
 }
+.Modal {
+  position: absolute;
+  top: 5rem;
+  left: 15rem;
+  right: 15rem;
+  bottom: 5rem;
+  background-color: white;
+}
+.Modal:focus {
+  outline: 0;
+}

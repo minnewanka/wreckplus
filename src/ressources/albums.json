@@ -1,0 +1,57 @@
+[
+  {
+    "id": "album-1",
+    "title": "Riding The Derelict",
+    "imageUrl": "http://wreckplus.com/wp-content/uploads/2014/03/riding-720.jpg",
+    "tracklist": [
+      "Dark Construktor",
+      "Leaders of Great Magnitude",
+      "Arturia: Stellar Blacksmith (instrumental)",
+      "Starcrossed Lovers",
+      "Esoterhythm"
+    ]
+  },
+  {
+    "id": "album-2",
+    "title": "Spies, Moles And Sabotage ! ",
+    "imageUrl": "http://wreckplus.com/wp-content/uploads/2014/02/a0480852077_10.jpg",
+    "tracklist": [
+      "Digital Aggression",
+      "High Plains Drifter",
+      "P38-Lightning",
+      "Flying Dutchman",
+      "Priestess Of The Oddity",
+      "Crossing The Nebula / Captain Lame",
+      "Superpower Vindicator",
+      "Hole In The Sky (reprise de Black Sabbath uniquement disponible sur le site officiel)"
+    ]
+  },
+  {
+    "id": "album-3",
+    "title": "Starcrossed Lovers",
+    "imageUrl": "http://wreckplus.com/wp-content/uploads/2016/04/pochette-starcrossed-768x768.jpg",
+    "tracklist": [
+      "Starcrossed Lovers (Extended Version)",
+      "Digital Aggression(Megaman X 8Bit Remix)",
+      "Starcrossed Lovers (Famicom RPG 8Bit Remix)"
+    ]
+  },
+  {
+    "id": "album-4",
+    "title": "Dark Construktor",
+    "imageUrl": "http://wreckplus.com/wp-content/uploads/2014/02/a1950255279_16.jpg",
+    "tracklist": [
+      "Dark Construktor",
+      "Leaders of Great Magnitude",
+      "Arturia: Stellar Blacksmith (instrumental)",
+      "Starcrossed Lovers",
+      "Esoterhythm"
+    ]
+  },
+  {
+    "id": "album-5",
+    "title": "Roars in the Dead of Night",
+    "imageUrl": "http://wreckplus.com/wp-content/uploads/2018/04/Roars-pochette-internet.jpg",
+    "tracklist": ["Roars in the Dead of Night", "Smashed our Way Through History"]
+  }
+]
