@@ -4,15 +4,14 @@ import Navbar from './components/navbar';
 import Hero from './features/hero';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { fab } from '@fortawesome/free-brands-svg-icons';
-import { faWindowClose } from '@fortawesome/free-solid-svg-icons';
+import { faAngleLeft, faAngleRight } from '@fortawesome/free-solid-svg-icons';
 import Album from './features/albums';
 import './App.css';
 import News from './features/news';
 import Modal from 'react-modal';
-import { SECTIONS } from './utils/constants';
 import { Provider } from './context';
 
-library.add(fab, faWindowClose);
+library.add(fab, faAngleLeft, faAngleRight);
 Modal.setAppElement('#root');
 
 class App extends React.Component {

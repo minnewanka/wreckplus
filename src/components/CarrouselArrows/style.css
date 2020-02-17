@@ -1,0 +1,13 @@
+.slick-disabled {
+  cursor: default;
+  background: green;
+  opacity: 0.5;
+}
+
+.next {
+  display: 'block';
+  background: 'red';
+}
+
+.previous {
+}

@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import './style.css';
 import Card from '../../components/card/Card';
 import Slider from 'react-slick';
+import PreviousArrow from '../../components/CarrouselArrows/PreviousArrow';
+import NextArrow from '../../components/CarrouselArrows/NextArrows';
 
 class News extends Component {
   render() {
@@ -11,6 +13,8 @@ class News extends Component {
       speed: 500,
       slidesToShow: 3,
       slidesToScroll: 3,
+      prevArrow: <PreviousArrow />,
+      nextArrow: <NextArrow />,
     };
     return (
       <div className="news">

@@ -3,6 +3,8 @@ import Slider from 'react-slick';
 import './style.css';
 import AlbumModal from './albumModal/AlbumModal';
 import albums from '../../ressources/albums.json';
+import PreviousArrow from '../../components/CarrouselArrows/PreviousArrow';
+import NextArrow from '../../components/CarrouselArrows/NextArrows';
 
 export default class SimpleSlider extends Component {
   constructor() {
@@ -37,6 +39,8 @@ export default class SimpleSlider extends Component {
       speed: 500,
       slidesToShow: 3,
       slidesToScroll: 3,
+      prevArrow: <PreviousArrow />,
+      nextArrow: <NextArrow />,
     };
     const { modalIsOpen, albumId } = this.state;
 

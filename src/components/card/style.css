@@ -4,10 +4,16 @@
   height: 500px;
   padding: 0 2rem 0 2rem;
 }
-
+.card-image-container {
+  height: 30%;
+}
+.card-image {
+  height: 100%;
+  width: 100%;
+}
 /* Add some padding inside the card container */
-.card-container {
-  padding: 2px 16px;
+.card-content-container {
+  /* padding: 2px 16px; */
   height: 100%;
   background-color: lightgray;
 }
