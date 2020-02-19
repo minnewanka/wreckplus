@@ -5,7 +5,7 @@ import logo from '../../images/logo.jpg';
 import SocialIcons from '../socialIcons/SocialIcons';
 
 const Navbar = props => {
-  const { showNavbar } = props;
+  const { showNavbar, activeSection, setActiveSection } = props;
   useEffect(() => {
     var navbar = document.querySelector('#navbar');
 
@@ -27,8 +27,11 @@ const Navbar = props => {
       <div id="navbar" className="navbar sticky">
         <img src={logo} alt="Logo" />
         {MENU.map(item => (
-          <div key={`navbar-${item}`} className="section-title">
-            <a className="nostyle" href={`#${item}`}>
+          <div
+            key={`navbar-${item}`}
+            className={`navbar-section-title ${item === activeSection ? 'active-section' : ''}`}
+          >
+            <a className="nostyle" href={`#${item}`} onClick={() => setActiveSection(item)}>
               {item.toUpperCase()}
             </a>
           </div>

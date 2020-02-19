@@ -40,6 +40,28 @@ a.nostyle:visited {
   cursor: auto;
 }
 
+.section-title {
+  align-self: center;
+}
+.section-title:after {
+  display: inline-block;
+  margin: 0 0 8px 20px;
+  height: 3px;
+  content: ' ';
+  text-shadow: none;
+  background-color: #999;
+  width: 400px;
+}
+.section-title:before {
+  display: inline-block;
+  margin: 0 20px 8px 0;
+  height: 3px;
+  content: ' ';
+  text-shadow: none;
+  background-color: #999;
+  width: 400px;
+}
+
 .slick-slide img {
   min-width: calc(100% - 100px);
   margin: 0 50px;

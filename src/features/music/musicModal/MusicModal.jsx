@@ -17,14 +17,15 @@ export default class AlbumModal extends Component {
         className="Modal"
       >
         <div className="album-modal">
-          <img
-            className="album-image"
-            src={album.imageUrl}
-            alt="album"
-            width="300"
-            length="300"
-            onClick={() => openModal()}
-          />
+          <div>
+            <img
+              className="album-image"
+              src={album.imageUrl}
+              alt="album"
+              width="800"
+              length="800"
+            />
+          </div>
           <div className="album-modal-content">
             <div className="album-modal-title-container">
               <h1>{album.title}</h1>
@@ -33,6 +34,11 @@ export default class AlbumModal extends Component {
               </button>
             </div>
             <div>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam dolorem ipsum
+                doloremque vel facere sunt consectetur perferendis, dolores eos magnam laudantium
+                reprehenderit alias mollitia harum aspernatur. Sed beatae aspernatur inventore?
+              </p>
               <h2>Tracklist</h2>
               <ol>
                 {tracklist.map(song => (

@@ -5,7 +5,13 @@ import Navbar from './Navbar';
 const AlbumConsumer = props => {
   return (
     <Consumer>
-      {({ showNavbar }) => <Navbar showNavbar={showNavbar} />}
+      {({ activeSection, showNavbar, setActiveSection }) => (
+        <Navbar
+          activeSection={activeSection}
+          showNavbar={showNavbar}
+          setActiveSection={setActiveSection}
+        />
+      )}
     </Consumer>
   );
 };

@@ -1,15 +1,19 @@
 export const SECTIONS = {
   HOME: 'home',
   NEWS: 'news',
-  ALBUM: 'album',
   MUSIC: 'music',
-  VIDEO: 'video',
+  VIDEO: 'videos',
+  CONTACT: 'contact',
+  SHOWS: 'shows',
+  BAND: 'band',
 };
 
 export const MENU = [
   SECTIONS.HOME,
   SECTIONS.NEWS,
-  SECTIONS.ALBUM,
+  SECTIONS.BAND,
   SECTIONS.MUSIC,
   SECTIONS.VIDEO,
+  SECTIONS.SHOWS,
+  SECTIONS.CONTACT,
 ];

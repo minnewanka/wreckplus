@@ -18,7 +18,7 @@ class News extends Component {
     };
     return (
       <div className="news">
-        <h1 className="news-section-title">NEWS</h1>
+        <h1 className="section-title">NEWS</h1>
         <Slider {...settings}>
           <div>
             <Card />

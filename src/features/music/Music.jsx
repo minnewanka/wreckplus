@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import Slider from 'react-slick';
 import './style.css';
-import AlbumModal from './albumModal/AlbumModal';
+import MusicModal from './musicModal/MusicModal';
 import albums from '../../ressources/albums.json';
 import PreviousArrow from '../../components/CarrouselArrows/PreviousArrow';
 import NextArrow from '../../components/CarrouselArrows/NextArrows';
 
-export default class SimpleSlider extends Component {
+export default class Music extends Component {
   constructor() {
     super();
 
@@ -46,8 +46,8 @@ export default class SimpleSlider extends Component {
 
     return (
       <div className="albums">
-        <h1 className="album-section-title">ALBUM</h1>
-        <AlbumModal
+        <h1 className="album-section-title">MUSIC</h1>
+        <MusicModal
           isOpen={modalIsOpen}
           onAfterOpen={this.afterOpenModal}
           closeModal={this.closeModal}

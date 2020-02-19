@@ -1,5 +1,6 @@
 .album-modal {
   display: flex;
+  height: 100%;
 }
 .album-modal-content {
   width: 100%;
@@ -9,6 +10,7 @@
   display: flex;
   justify-content: space-between;
 }
+
 .album-modal-close-button {
   display: block;
   width: 5rem;

@@ -1,0 +1,15 @@
+.videos {
+  height: 100%;
+  padding: 50px;
+  display: flex;
+
+  flex-direction: column;
+}
+.primary-video {
+  height: 100%;
+  align-self: center;
+}
+.secondary-videos {
+  display: flex;
+  justify-content: space-around;
+}
