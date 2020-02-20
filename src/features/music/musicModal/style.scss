@@ -7,11 +7,15 @@
   }
 
   .music-modal-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     width: 100%;
-    padding-left: 2rem;
+    padding: 0 0 1rem 2rem;
 
     .music-modal-title-container {
       display: flex;
+      padding-left: 1rem;
       justify-content: space-between;
 
       .music-modal-close-button {
@@ -25,6 +29,16 @@
         &:hover {
           cursor: pointer;
         }
+      }
+    }
+    .music-modal-album-description {
+      flex-grow: 1;
+      padding: 0 1rem 0 1rem;
+    }
+    .music-modal-album-link {
+      padding: 0.5rem 1rem 0 1rem;
+      .spotify {
+        height: 3.5rem;
       }
     }
   }

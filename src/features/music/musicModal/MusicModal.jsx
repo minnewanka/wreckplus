@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import Modal from 'react-modal';
 import albums from '../../../ressources/albums.json';
 import './style.scss';
+import spotify from '../../../images/Spotify_Logo_RGB_Black.png';
+import bandcamp from '../../../images/bandcamp-logotype-dark-128.png';
 
 export default class AlbumModal extends Component {
   render() {
@@ -25,7 +27,7 @@ export default class AlbumModal extends Component {
                 X
               </button>
             </div>
-            <div>
+            <div className="music-modal-album-description">
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam dolorem ipsum
                 doloremque vel facere sunt consectetur perferendis, dolores eos magnam laudantium
@@ -37,6 +39,10 @@ export default class AlbumModal extends Component {
                   <li>{song}</li>
                 ))}
               </ol>
+            </div>
+            <div className="music-modal-album-link">
+              <img className="spotify" src={spotify} alt="logo" />
+              <img className="spotify" src={bandcamp} alt="logo" />
             </div>
           </div>
         </div>

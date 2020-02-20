@@ -46,7 +46,7 @@ export default class Music extends Component {
 
     return (
       <div className="music">
-        <h1 className="music-section-title">MUSIC</h1>
+        <h1 className="section-title">MUSIC</h1>
         <MusicModal
           isOpen={modalIsOpen}
           onAfterOpen={this.afterOpenModal}
