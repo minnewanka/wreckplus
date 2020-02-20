@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import './style.css';
+import './style.scss';
 import Card from '../../components/card/Card';
 import Slider from 'react-slick';
-import PreviousArrow from '../../components/CarrouselArrows/PreviousArrow';
-import NextArrow from '../../components/CarrouselArrows/NextArrows';
+import PreviousArrow from '../../components/carrouselArrows/PreviousArrow';
+import NextArrow from '../../components/carrouselArrows/NextArrows';
 
 class News extends Component {
   render() {

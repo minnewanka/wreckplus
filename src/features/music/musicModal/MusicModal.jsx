@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import Modal from 'react-modal';
 import albums from '../../../ressources/albums.json';
-import './style.css';
+import './style.scss';
 
 export default class AlbumModal extends Component {
   render() {
-    const { albumId, isOpen, openModal, afterOpenModal, closeModal } = this.props;
+    const { albumId, isOpen, afterOpenModal, closeModal } = this.props;
     const album = isOpen ? albums.find(album => album.id === albumId) : {};
     const tracklist = album.tracklist ? album.tracklist : [];
     return (
@@ -16,20 +16,12 @@ export default class AlbumModal extends Component {
         contentLabel="Example Modal"
         className="Modal"
       >
-        <div className="album-modal">
-          <div>
-            <img
-              className="album-image"
-              src={album.imageUrl}
-              alt="album"
-              width="800"
-              length="800"
-            />
-          </div>
-          <div className="album-modal-content">
-            <div className="album-modal-title-container">
+        <div className="music-modal">
+          <img className="music-modal-image" src={album.imageUrl} alt="album" width="500" />
+          <div className="music-modal-content">
+            <div className="music-modal-title-container">
               <h1>{album.title}</h1>
-              <button className="album-modal-close-button" onClick={closeModal}>
+              <button className="music-modal-close-button" onClick={closeModal}>
                 X
               </button>
             </div>

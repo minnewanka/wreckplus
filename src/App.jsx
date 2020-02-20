@@ -1,16 +1,15 @@
 import React from 'react';
-import './App.css';
 import Navbar from './components/navbar';
 import Hero from './features/hero';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { fab } from '@fortawesome/free-brands-svg-icons';
 import { faAngleLeft, faAngleRight } from '@fortawesome/free-solid-svg-icons';
 import Music from './features/music';
-import './App.css';
 import News from './features/news';
 import Modal from 'react-modal';
 import { Provider } from './context';
 import Videos from './features/videos';
+import './App.scss';
 
 library.add(fab, faAngleLeft, faAngleRight);
 Modal.setAppElement('#root');

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import logowp from '../../images/logo-wp.png';
-import './style.css';
+import './style.scss';
 
 class Hero extends Component {
   render() {

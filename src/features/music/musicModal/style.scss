@@ -1,0 +1,31 @@
+.music-modal {
+  display: flex;
+  height: 100%;
+
+  .music-modal-image {
+    display: inline-block;
+  }
+
+  .music-modal-content {
+    width: 100%;
+    padding-left: 2rem;
+
+    .music-modal-title-container {
+      display: flex;
+      justify-content: space-between;
+
+      .music-modal-close-button {
+        display: block;
+        width: 5rem;
+        height: 5rem;
+        background-color: black;
+        color: white;
+        border: none;
+        font-size: 3rem;
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

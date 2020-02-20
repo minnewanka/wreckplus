@@ -4,6 +4,15 @@
   align-items: center;
   color: white;
   z-index: 1;
+
+  .navbar-section-title {
+    letter-spacing: 5px;
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
+  .navbar-active-section {
+    color: orange;
+  }
 }
 
 .navbar.scrolled {
@@ -11,18 +20,8 @@
   background-color: white;
 }
 
-.navbar-section-title {
-  letter-spacing: 5px;
-  font-weight: bold;
-  font-size: 1.2rem;
-}
-
 .sticky {
   position: fixed;
   top: 0;
   width: 100%;
-}
-
-.active-section {
-  color: orange;
 }

@@ -1,6 +1,5 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import './style.css';
 
 const NextArrow = props => {
   const { className, onClick } = props;

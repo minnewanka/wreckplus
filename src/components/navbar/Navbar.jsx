@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import './style.css';
+import './style.scss';
 import { MENU } from '../../utils/constants';
 import logo from '../../images/logo.jpg';
 import SocialIcons from '../socialIcons/SocialIcons';
@@ -29,7 +29,9 @@ const Navbar = props => {
         {MENU.map(item => (
           <div
             key={`navbar-${item}`}
-            className={`navbar-section-title ${item === activeSection ? 'active-section' : ''}`}
+            className={`navbar-section-title ${
+              item === activeSection ? 'navbar-active-section' : ''
+            }`}
           >
             <a className="nostyle" href={`#${item}`} onClick={() => setActiveSection(item)}>
               {item.toUpperCase()}

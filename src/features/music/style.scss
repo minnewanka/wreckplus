@@ -1,0 +1,10 @@
+.music {
+  height: 100%;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+
+  .music-section-title {
+    align-self: center;
+  }
+}

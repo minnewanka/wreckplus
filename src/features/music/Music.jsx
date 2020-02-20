@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import Slider from 'react-slick';
-import './style.css';
+import './style.scss';
 import MusicModal from './musicModal/MusicModal';
 import albums from '../../ressources/albums.json';
-import PreviousArrow from '../../components/CarrouselArrows/PreviousArrow';
-import NextArrow from '../../components/CarrouselArrows/NextArrows';
+import PreviousArrow from '../../components/carrouselArrows/PreviousArrow';
+import NextArrow from '../../components/carrouselArrows/NextArrows';
 
 export default class Music extends Component {
   constructor() {
@@ -45,8 +45,8 @@ export default class Music extends Component {
     const { modalIsOpen, albumId } = this.state;
 
     return (
-      <div className="albums">
-        <h1 className="album-section-title">MUSIC</h1>
+      <div className="music">
+        <h1 className="music-section-title">MUSIC</h1>
         <MusicModal
           isOpen={modalIsOpen}
           onAfterOpen={this.afterOpenModal}

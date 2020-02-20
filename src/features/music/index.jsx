@@ -3,7 +3,7 @@ import { Consumer } from '../../context';
 import Music from './Music';
 import { SECTIONS } from '../../utils/constants';
 import { withScrollableAnchor } from '../../helper/EnhanceScrollableAnchor';
-import { withModal } from '../../helper/EnhanceModal';
+// import { withModal } from '../../helper/EnhanceModal';
 
 class MusicConsumer extends Component {
   render() {
