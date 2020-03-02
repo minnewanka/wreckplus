@@ -1,65 +1,53 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 import Slider from 'react-slick';
 import './style.scss';
 import MusicModal from './musicModal/MusicModal';
 import albums from '../../ressources/albums.json';
 import PreviousArrow from '../../components/carrouselArrows/PreviousArrow';
 import NextArrow from '../../components/carrouselArrows/NextArrows';
+import { SECTIONS } from '../../utils/constants';
 
-export default class Music extends Component {
-  constructor() {
-    super();
+const Music = () => {
+  const [modalIsOpen, setModalIsOpen] = useState(false);
+  const [albumId, setAlbumId] = useState('');
 
-    this.state = {
-      modalIsOpen: false,
-      albumId: '',
-    };
+  const openModal = albumId => {
+    setModalIsOpen(true);
+    setAlbumId(albumId);
+  };
 
-    this.openModal = this.openModal.bind(this);
-    this.afterOpenModal = this.afterOpenModal.bind(this);
-    this.closeModal = this.closeModal.bind(this);
-  }
+  const afterOpenModal = () => {};
 
-  openModal(albumId) {
-    this.setState({ modalIsOpen: true, albumId: albumId });
-    this.props.toggleNavbar();
-  }
+  const closeModal = () => {
+    setModalIsOpen(false);
+  };
 
-  afterOpenModal() {}
-
-  closeModal() {
-    this.setState({ modalIsOpen: false });
-    this.props.toggleNavbar();
-  }
-
-  render() {
-    const { modalIsOpen, albumId } = this.state;
-
-    return (
-      <div className="music">
-        <h1 className="section-title">MUSIC</h1>
-        <MusicModal
-          isOpen={modalIsOpen}
-          onAfterOpen={this.afterOpenModal}
-          closeModal={this.closeModal}
-          openModal={this.openModal}
-          albumId={albumId}
-        />
-        <div className="music-albums">
-          {albums.reverse().map(album => (
-            <div className="music-albums-item" key={`album-${album.id}`}>
-              <img
-                className="grow"
-                src={album.imageUrl}
-                alt="album"
-                width="300"
-                length="300"
-                onClick={() => this.openModal(album.id)}
-              />
-            </div>
-          ))}
-        </div>
+  return (
+    <section id={SECTIONS.MUSIC} className="music">
+      <h1 className="section-title">MUSIC</h1>
+      <MusicModal
+        isOpen={modalIsOpen}
+        onAfterOpen={afterOpenModal}
+        closeModal={closeModal}
+        openModal={openModal}
+        albumId={albumId}
+      />
+      <div className="music-albums">
+        {albums.reverse().map(album => (
+          <div className="music-albums-item" key={`album-${album.id}`}>
+            <img
+              className="grow"
+              src={album.imageUrl}
+              alt="album"
+              width="300"
+              length="300"
+              onClick={() => openModal(album.id)}
+            />
+          </div>
+        ))}
       </div>
-    );
-  }
-}
+    </section>
+  );
+};
+
+export default Music;

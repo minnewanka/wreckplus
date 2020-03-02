@@ -3,7 +3,7 @@ import './style.scss';
 
 const Band = () => {
   return (
-    <div className="band">
+    <section id="band" className="band">
       <h1 className="section-title">THE BAND</h1>
       <div className="band-content container">
         <p>
@@ -19,7 +19,7 @@ const Band = () => {
           judas priest, kiss, zz top and blue oÿster cult…
         </p>
       </div>
-    </div>
+    </section>
   );
 };
 

@@ -3,9 +3,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import './style.scss';
 import socialNetworks from '../../ressources/socialNetworks.json';
 
-const SocialIcons = () => {
+const SocialIcons = props => {
   return (
-    <div id="socialIcons">
+    <div className={props.className} id="socialIcons">
       {socialNetworks.map(social => (
         <a
           key={social.name}

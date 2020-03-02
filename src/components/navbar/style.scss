@@ -11,7 +11,17 @@
   @include responsive(tab-port) {
     display: none;
   }
-
+  .navbar-logo {
+    margin-left: 5rem;
+  }
+  .navbar-scroll-spy {
+    display: flex;
+    justify-content: space-around;
+    flex-grow: 1;
+  }
+  .navbar-social-icon {
+    margin-right: 5rem;
+  }
   .navbar-section-title {
     letter-spacing: 3px;
     font-weight: bold;
@@ -19,13 +29,9 @@
     &:first-of-type {
       margin-left: 10rem;
     }
-    &:nth-last-of-type(2) {
+    &:nth-last-of-type(1) {
       margin-right: 10rem;
     }
-  }
-  .navbar-active-section {
-    color: white;
-    font-size: 1.5rem;
   }
 }
 
@@ -44,4 +50,9 @@
   position: fixed;
   top: 0;
   width: 100%;
+}
+
+.activeItem {
+  color: red;
+  font-size: 1.5rem;
 }

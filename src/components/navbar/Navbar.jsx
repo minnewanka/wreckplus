@@ -6,7 +6,6 @@ import SocialIcons from '../socialIcons/SocialIcons';
 import Scrollspy from 'react-scrollspy';
 
 const Navbar = props => {
-  const { showNavbar, activeSection, setActiveSection } = props;
   useEffect(() => {
     var navbar = document.querySelector('#navbar');
     var logo = document.querySelector('#logo');
@@ -14,11 +13,11 @@ const Navbar = props => {
 
     window.onscroll = function() {
       if (window.pageYOffset > 300) {
-        showNavbar && navbar.classList.add('scrolled');
+        navbar && navbar.classList.add('scrolled');
         logo && logo.classList.add('navbar-hidden');
         socialIcons && socialIcons.classList.add('navbar-hidden');
       } else {
-        showNavbar && navbar.classList.remove('scrolled');
+        navbar && navbar.classList.remove('scrolled');
         logo && logo.classList.remove('navbar-hidden');
         socialIcons && socialIcons.classList.remove('navbar-hidden');
       }
@@ -26,24 +25,24 @@ const Navbar = props => {
   });
 
   return (
-    showNavbar && (
-      <div id="navbar" className="navbar sticky">
-        <img id="logo" src={logo} alt="Logo" />
+    <div id="navbar" className="navbar sticky">
+      <img id="logo" className="navbar-logo" src={logo} alt="Logo" />
+      <Scrollspy
+        items={MENU}
+        className="navbar-scroll-spy"
+        componentTag="div"
+        currentClassName="activeItem"
+      >
         {MENU.map(item => (
-          <div
-            key={`navbar-${item}`}
-            className={`navbar-section-title ${
-              item === activeSection ? 'navbar-active-section' : ''
-            }`}
-          >
-            <a className="nostyle" href={`#${item}`} onClick={() => setActiveSection(item)}>
+          <div className="navbar-section-title">
+            <a className="nostyle" href={`#${item}`}>
               {item.toUpperCase()}
             </a>
           </div>
         ))}
-        <SocialIcons />
-      </div>
-    )
+      </Scrollspy>
+      <SocialIcons className="navbar-social-icon" />
+    </div>
   );
 };
 
