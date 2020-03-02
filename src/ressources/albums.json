@@ -9,7 +9,9 @@
       "Arturia: Stellar Blacksmith (instrumental)",
       "Starcrossed Lovers",
       "Esoterhythm"
-    ]
+    ],
+    "spotify": "",
+    "bandcamp": ""
   },
   {
     "id": "album-2",
@@ -46,12 +48,16 @@
       "Arturia: Stellar Blacksmith (instrumental)",
       "Starcrossed Lovers",
       "Esoterhythm"
-    ]
+    ],
+    "spotify": "https://open.spotify.com/album/0fLvU4RK6QL7LrFfpEdKw0?si=ieW1tekiSWua9mMMEdECbA",
+    "bandcamp": "https://wreckplus.bandcamp.com/album/dark-construktor-ep"
   },
   {
     "id": "album-5",
     "title": "Roars in the Dead of Night",
     "imageUrl": "http://wreckplus.com/wp-content/uploads/2018/04/Roars-pochette-internet.jpg",
-    "tracklist": ["Roars in the Dead of Night", "Smashed our Way Through History"]
+    "tracklist": ["Roars in the Dead of Night", "Smashed our Way Through History"],
+    "spotify": "https://open.spotify.com/album/36dQgTQR5ip9o6oE69iMrX?si=slc-3fJVSOuZ7M1CuEgQNQ",
+    "bandcamp": "https://wreckplus.bandcamp.com/album/roars-in-the-dead-of-night-maxi-single"
   }
 ]

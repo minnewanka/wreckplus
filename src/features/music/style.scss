@@ -1,8 +1,18 @@
 .music {
-  height: 100%;
+  min-height: 100%;
   padding: 50px;
   display: flex;
   flex-direction: column;
+  background-color: #191a1e;
+  .music-albums {
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    .music-albums-item {
+      margin: 1rem 1rem 0rem 0rem;
+    }
+  }
 
   .music-section-title {
     align-self: center;

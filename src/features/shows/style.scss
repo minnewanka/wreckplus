@@ -1,0 +1,34 @@
+.shows {
+  height: 100%;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  color: #b5b5b5;
+  .shows-table {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    .shows-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      height: 6rem;
+      border-bottom: 0.5px solid;
+      &:first-child {
+        border-top: 0.5px solid;
+      }
+      .show-date {
+        width: 30%;
+        font-weight: 600;
+        color: white;
+      }
+      .show-venue {
+        width: 50%;
+        color: #889dae;
+      }
+      .show-city {
+        width: 20%;
+      }
+    }
+  }
+}

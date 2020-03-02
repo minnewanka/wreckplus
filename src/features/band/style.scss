@@ -1,9 +1,13 @@
 .band {
-  height: 60%;
-  color: white;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  color: #b5b5b5;
+  background-color: #191a1e;
+  padding-top: 50px;
 }
 
 .band-content {
-  display: flex;
-  align-items: bottom;
+  text-align: justify;
+  text-justify: inter-word;
 }

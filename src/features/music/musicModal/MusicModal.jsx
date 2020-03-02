@@ -17,6 +17,7 @@ export default class AlbumModal extends Component {
         onRequestClose={closeModal}
         contentLabel="Example Modal"
         className="Modal"
+        style={{ overlay: { backgroundColor: 'rgba(25, 26, 30, 0.75)' } }}
       >
         <div className="music-modal">
           <img className="music-modal-image" src={album.imageUrl} alt="album" width="500" />
@@ -41,8 +42,12 @@ export default class AlbumModal extends Component {
               </ol>
             </div>
             <div className="music-modal-album-link">
-              <img className="spotify" src={spotify} alt="logo" />
-              <img className="spotify" src={bandcamp} alt="logo" />
+              <a href={album.spotify} target="_blank">
+                <img className="spotify" src={spotify} alt="logo" />
+              </a>
+              <a href={album.bandcamp} target="_blank">
+                <img className="spotify" src={bandcamp} alt="logo" />
+              </a>
             </div>
           </div>
         </div>

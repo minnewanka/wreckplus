@@ -1,23 +1,43 @@
+@import '../../sass/mixin.scss';
+
 .navbar {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  background-color: rgba(26, 13, 67, 0.2);
   color: white;
   z-index: 1;
+  font-size: 1.2rem;
+  @include responsive(tab-port) {
+    display: none;
+  }
 
   .navbar-section-title {
-    letter-spacing: 5px;
+    letter-spacing: 3px;
     font-weight: bold;
-    font-size: 1.2rem;
+    font-size: inherit;
+    &:first-of-type {
+      margin-left: 10rem;
+    }
+    &:nth-last-of-type(2) {
+      margin-right: 10rem;
+    }
   }
   .navbar-active-section {
-    color: orange;
+    color: white;
+    font-size: 1.5rem;
   }
 }
 
 .navbar.scrolled {
-  color: black;
-  background-color: white;
+  color: #b5b5b5;
+  background-color: black;
+  padding: 3rem 0rem 2rem 0rem;
+  font-size: 1rem;
+}
+
+.navbar-hidden {
+  display: none;
 }
 
 .sticky {

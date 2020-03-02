@@ -1,18 +1,12 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import './style.scss';
+import socialNetworks from '../../ressources/socialNetworks.json';
 
 const SocialIcons = () => {
   return (
-    <div>
-      {[
-        { name: 'facebook', url: 'https://www.facebook.com/wreckplus/' },
-        { name: 'twitter', url: 'https://twitter.com/wreck_plus' },
-        {
-          name: 'spotify',
-          url: 'https://open.spotify.com/artist/67O5W0HYQmZhcFq24Pew9q',
-        },
-      ].map(social => (
+    <div id="socialIcons">
+      {socialNetworks.map(social => (
         <a
           key={social.name}
           className="nostyle social-icon"

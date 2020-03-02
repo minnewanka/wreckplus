@@ -33,15 +33,6 @@ export default class Music extends Component {
   }
 
   render() {
-    const settings = {
-      dots: false,
-      infinite: false,
-      speed: 500,
-      slidesToShow: 3,
-      slidesToScroll: 3,
-      prevArrow: <PreviousArrow />,
-      nextArrow: <NextArrow />,
-    };
     const { modalIsOpen, albumId } = this.state;
 
     return (
@@ -54,9 +45,9 @@ export default class Music extends Component {
           openModal={this.openModal}
           albumId={albumId}
         />
-        <Slider {...settings}>
+        <div className="music-albums">
           {albums.reverse().map(album => (
-            <div key={`album-${album.id}`}>
+            <div className="music-albums-item" key={`album-${album.id}`}>
               <img
                 className="grow"
                 src={album.imageUrl}
@@ -67,7 +58,7 @@ export default class Music extends Component {
               />
             </div>
           ))}
-        </Slider>
+        </div>
       </div>
     );
   }

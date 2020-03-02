@@ -17,7 +17,7 @@ class News extends Component {
       nextArrow: <NextArrow />,
     };
     return (
-      <div className="news">
+      <div className="news section-container ">
         <h1 className="section-title">NEWS</h1>
         <Slider {...settings}>
           <div>
