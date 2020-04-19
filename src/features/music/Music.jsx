@@ -1,10 +1,8 @@
 import React, { useState } from 'react';
-import Slider from 'react-slick';
 import './style.scss';
 import MusicModal from './musicModal/MusicModal';
 import albums from '../../ressources/albums.json';
-import PreviousArrow from '../../components/carrouselArrows/PreviousArrow';
-import NextArrow from '../../components/carrouselArrows/NextArrows';
+
 import { SECTIONS } from '../../utils/constants';
 
 const Music = () => {
