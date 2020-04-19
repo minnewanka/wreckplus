@@ -1,5 +1,5 @@
 @import './sass/variable.scss';
-
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:700|Raleway&display=swap');
 body,
 html,
 #root {
@@ -17,8 +17,7 @@ body {
   font-size: 1.6rem;
   line-height: 1.5;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu',
-    'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  font-family: 'Raleway', Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -49,7 +48,7 @@ a.nostyle {
   font-size: 5rem;
   letter-spacing: 0.2rem;
   align-self: center;
-  color: $primary-color;
+  color: $primary-font-color;
 }
 
 /********** react-slick *********/
@@ -104,16 +103,6 @@ body.ReactModal__Body--open {
     left: 0;
     right: 0;
     filter: blur(2px);
-  }
-}
-
-/***** EFFECT *****/
-.grow {
-  transition: all 0.3s ease-in-out;
-  &:hover {
-    transform: scale(1.1);
-    box-shadow: 0 0 11px rgba(33, 33, 33, 0.2);
-    cursor: pointer;
   }
 }
 

@@ -1,42 +1,62 @@
+@import '../../sass/variable.scss';
 @import '../../sass/mixin.scss';
 
 .navbar {
   display: flex;
   justify-content: space-around;
-  align-items: center;
   background-color: rgba(26, 13, 67, 0.2);
   color: white;
   z-index: 1;
   font-size: 1.2rem;
-  @include responsive(tab-port) {
-    display: none;
-  }
+
   .navbar-logo {
     margin-left: 5rem;
+    @include responsive(tab-port) {
+      margin-left: 0;
+    }
   }
+  .navbar-responsive-menu {
+    display: none;
+    @include responsive(tab-port) {
+      display: flex;
+      align-items: center;
+      margin-right: 1rem;
+    }
+  }
+
   .navbar-scroll-spy {
     display: flex;
     justify-content: space-around;
     flex-grow: 1;
   }
-  .navbar-social-icon {
-    margin-right: 5rem;
+  .navbar-social-icon :not(navbar-hidden) {
+    height: 100%;
+    display: flex;
+    margin-right: 1rem;
+    align-items: center;
+    @include responsive(tab-port) {
+      display: none;
+    }
   }
   .navbar-section-title {
     letter-spacing: 3px;
     font-weight: bold;
-    font-size: inherit;
+    font-size: 1.3rem;
+    align-self: center;
     &:first-of-type {
       margin-left: 10rem;
     }
     &:nth-last-of-type(1) {
       margin-right: 10rem;
     }
+    @include responsive(tab-port) {
+      display: none;
+    }
   }
 }
 
 .navbar.scrolled {
-  color: #b5b5b5;
+  color: $primary-font-color;
   background-color: black;
   padding: 3rem 0rem 2rem 0rem;
   font-size: 1rem;
@@ -53,6 +73,5 @@
 }
 
 .activeItem {
-  color: red;
-  font-size: 1.5rem;
+  color: white;
 }

@@ -36,11 +36,9 @@ const Music = () => {
         {albums.reverse().map(album => (
           <div className="music-albums-item" key={`album-${album.id}`}>
             <img
-              className="grow"
+              className="music-albums-image"
               src={album.imageUrl}
               alt="album"
-              width="300"
-              length="300"
               onClick={() => openModal(album.id)}
             />
           </div>

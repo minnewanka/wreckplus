@@ -1,32 +1,34 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 import './style.scss';
 import { MENU } from '../../utils/constants';
 import logo from '../../images/logo.jpg';
 import SocialIcons from '../socialIcons/SocialIcons';
 import Scrollspy from 'react-scrollspy';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const Navbar = props => {
-  useEffect(() => {
-    var navbar = document.querySelector('#navbar');
-    var logo = document.querySelector('#logo');
-    var socialIcons = document.querySelector('#socialIcons');
+  const navbarRef = useRef(null);
+  const socialIconsRef = useRef(null);
+  const logoRef = useRef(null);
 
+  useEffect(() => {
     window.onscroll = function() {
       if (window.pageYOffset > 300) {
-        navbar && navbar.classList.add('scrolled');
-        logo && logo.classList.add('navbar-hidden');
-        socialIcons && socialIcons.classList.add('navbar-hidden');
+        navbarRef.current.classList.add('scrolled');
+        logoRef.current.classList.add('navbar-hidden');
+        socialIconsRef.current.classList.add('navbar-hidden');
       } else {
-        navbar && navbar.classList.remove('scrolled');
-        logo && logo.classList.remove('navbar-hidden');
-        socialIcons && socialIcons.classList.remove('navbar-hidden');
+        navbarRef.current.classList.remove('scrolled');
+        logoRef.current.classList.remove('navbar-hidden');
+        socialIconsRef.current.classList.remove('navbar-hidden');
       }
     };
   });
 
   return (
-    <div id="navbar" className="navbar sticky">
-      <img id="logo" className="navbar-logo" src={logo} alt="Logo" />
+    <div ref={navbarRef} className="navbar sticky">
+      <img ref={logoRef} className="navbar-logo" src={logo} alt="Logo" />
+
       <Scrollspy
         items={MENU}
         className="navbar-scroll-spy"
@@ -41,7 +43,12 @@ const Navbar = props => {
           </div>
         ))}
       </Scrollspy>
-      <SocialIcons className="navbar-social-icon" />
+      <div className="navbar-responsive-menu">
+        <FontAwesomeIcon icon={'bars'} color="#b5b5b5" size="3x" />
+      </div>
+      <div className="navbar-social-icon" ref={socialIconsRef}>
+        <SocialIcons />
+      </div>
     </div>
   );
 };

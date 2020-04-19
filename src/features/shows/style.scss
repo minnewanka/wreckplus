@@ -1,9 +1,11 @@
+@import '../../sass/variable.scss';
+
 .shows {
   height: 100%;
   padding: 50px;
   display: flex;
   flex-direction: column;
-  color: #b5b5b5;
+  color: $primary-font-color;
   .shows-table {
     display: flex;
     flex-direction: column;

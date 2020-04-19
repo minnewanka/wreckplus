@@ -1,8 +1,10 @@
+@import '../../sass/variable.scss';
+
 .band {
   height: 100%;
   display: flex;
   flex-direction: column;
-  color: #b5b5b5;
+  color: $primary-font-color;
   background-color: #191a1e;
   padding-top: 50px;
 }
